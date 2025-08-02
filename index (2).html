@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Security Checker</title>
+  <style>
+    .container {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      color: #fff;
+      margin-top: 50px;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #3a3a52);
+      color: #fff;
+    }
+
+    .result {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Check Credential Security</h1>
+
+    <div>
+      <h2>Check Email</h2>
+      <input type="email" id="emailInput" placeholder="Enter email">
+      <button onclick="checkEmail()">Check Email</button>
+      <div id="emailResult" class="result"></div>
+    </div>
+
+    <div>
+      <h2>Check Password</h2>
+      <input type="password" id="passwordInput" placeholder="Enter password">
+      <button onclick="checkPassword()">Check Password</button>
+      <div id="passwordResult" class="result"></div>
+    </div>
+  </div>
+
+  <!-- Include Supabase -->
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
